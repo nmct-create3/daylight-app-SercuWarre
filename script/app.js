@@ -112,6 +112,7 @@ let showResult = (queryResponse) => {
   document.querySelector(
     '.js-location'
   ).innerHTML = `${queryResponse.city.name}, ${queryResponse.city.country}`;
+  
   // Hier gaan we een functie oproepen die de zon een bepaalde positie kan geven en dit kan updaten.
   // Geef deze functie de periode tussen sunrise en sunset mee en het tijdstip van sunrise.
   updateTimeAndTimeLeft(queryResponse.city.sunset);
@@ -145,5 +146,5 @@ let getAPI = async (lat, lon) => {
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Test');
   // 1 We will query the API with longitude and latitude.
-  getAPI(50.8268, 3.2544);
+  getAPI(50.944569, 3.12342);
 });
